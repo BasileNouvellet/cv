@@ -2,8 +2,7 @@
 ### Build instructions
 For Windows
 - Install **MiKTeX** (**lualatex** will be installed with)
-- Launch *MiKTeX* console
-- Be sure that *lualatex* is available by running `lualatex -v`
+- Be sure that *lualatex* is available by running in the console `lualatex -v`
 - Navigate to the project folder containing both .tex and .cls files
 - Run `lualatex NAME_OF_THE_FILE.tex`
 
