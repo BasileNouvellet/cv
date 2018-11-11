@@ -111,7 +111,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	\def\aftersubsectionspace{2.1pt}
 }{
 	\def\namespaceskip{0.4em}
-	\def\afterheaderspace{3pt}
+	\def\afterheaderspace{0.3pt}
 	\def\beforesectionheaderspace{4.75pt}
 	\def\sectionheadermargin{3pt}
 	\def\beforesectionheaderhrulespace{3pt}
