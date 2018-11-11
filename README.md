@@ -1,3 +1,16 @@
+# Personal CV of Basile Nouvellet
+### Build instructions
+For Windows
+- Install **MiKTeX** (**lualatex** will be installed with)
+- Be sure that *lualatex* is available by running in the console `lualatex -v`
+- Navigate to the project folder containing both .tex and .cls files
+- Run `lualatex NAME_OF_THE_FILE.tex`
+
+
+Run `git clean -xf` to clean the project folder from build files
+
+---
+
 # McDowell CV
 McDowell CV is a LuaLaTeX class for building neat and space-efficient CVs using the design originally proposed by Gayle L. McDowell at 
 http://www.careercup.com/resume. 

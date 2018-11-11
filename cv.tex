@@ -1,0 +1,152 @@
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[]{mcdowellcv}
+
+% For mathematical symbols
+\usepackage{amsmath}
+
+% Set applicant's personal data for header
+\name{Basile Nouvellet}
+\address{16 Cours Lafayette \linebreak 69003 Lyon, France}
+\contacts{(+65) 84955889 \linebreak \href{mailto:basile.nouvellet@ponts.org}{basile.nouvellet@ponts.org}}
+
+\begin{document}
+
+    % Build Header
+    \makeheader
+
+    % Github and website
+    \begin{tabu}
+        to 1\textwidth { X[l,p] X[c,p] X[r,p] }
+        https://github.com/BasileNouvellet & \textbf{} & https://basile.nouvellet.com \\
+    \end{tabu}
+
+    % ================================ EDUCATION =======================================================================
+    \begin{cvsection}{Education}
+
+        % ------------------------------------ Ponts -------------------------------------------------------------------
+        \begin{cvsubsection}{Paris, France}{Ponts ParisTech}{2016 -- 2020}
+            \begin{itemize}
+                \item \textbf{Major}: Financial Engineering, Master's degree
+                \item \textbf{Minor}: Computer Science
+                \item \textbf{Coursework} (GPA: 3.77): Software Development, Corporate Finance, Statistics, Entrepreneurship, Theory of Games, Financial Market, Operational Research.
+            \end{itemize}
+        \end{cvsubsection}
+
+        % ------------------------------------ Lazaristes --------------------------------------------------------------
+        \begin{cvsubsection}{Lyon, France}{Lyc\'ee Aux Lazaristes}{2014 -- 2016}
+            Intensive and hard working preparatory class for the \textit{Grandes \'Ecoles d'Ing\'enieur} entrance exam on mathematics, physics and engineering science.
+        \end{cvsubsection}
+
+    \end{cvsection}
+
+    % ================================ EMPLOYEMENT =====================================================================
+    \begin{cvsection}{Employment}
+
+        % ---------------------------- Adactive ------------------------------------------------------------------------
+        \begin{cvsubsection}{Full Stack Developer, Intern}{Adactive}{July 2018 -- January 2019, \textit{Singapore}}
+            Build custom Web Apps for malls \& airports touch-enabled screens (with React \& Electron), to offer 3D wayfinding services inside buildings.
+            \begin{itemize}
+                \item Integration with APIs such as Google Maps and Singapore Bus Network to display live data
+                \item Deployment to AWS S3 servers
+                \item Optimize app performance to fit with hardware specifications
+                \item Build a server for synchronizing advertisement medias on 6 different screens (with Express)
+            \end{itemize}
+        \end{cvsubsection}
+
+        % ---------------------------- Update You ----------------------------------------------------------------------
+        \begin{cvsubsection}{Computer Teacher}{Update You}{January 2017 -- July 2018, \textit{Paris}}
+            Teach computer usage and resolve technological issues at my clients home, during missions as a self-entrepreneur in a French tech start-up.
+            About 15 missions (\textasciitilde 10 different clients).
+        \end{cvsubsection}
+
+        % ---------------------------- Town Hall of Paris --------------------------------------------------------------
+        \begin{cvsubsection}{Freelance Full Stack Developer}{Town Hall of Paris}{March -- December 2017, \textit{Paris}}
+            Develop a website for an automatic ID card reader based on computer vision and NLP (natural language processing), in partnership with the Junior Enterprise of my engineering school.
+        \end{cvsubsection}
+
+    \end{cvsection}
+
+    % ================================ SOFTWARE PROJECTS ===============================================================
+    \begin{cvsection}{Software Projects}
+
+        % ---------------------------- Personal website ----------------------------------------------------------------
+        \hspace{4pt} \textbf{Personal website:} \url{basile.nouvellet.com} (\small for additional information and projects)
+
+        % ---------------------------- Quantmetry ----------------------------------------------------------------------
+        \begin{cvsubsection}{Crypto-currency price forecasting}{}{}
+            \begin{itemize}
+                \item[--] Price forecasting of Bitcoin, Ethereum and other crypto-currencies based on tweets published by influencers on Twitter, using machine learning and data science. In partnership with Quantmetry, a French data consulting firm.
+                \item[--] \textit{Python, Scikit-Learn, Pandas}
+            \end{itemize}
+        \end{cvsubsection}
+
+        % ---------------------------- Harvestr ------------------------------------------------------------------------
+        \begin{cvsubsection}{Front end development}{}{}
+            \begin{itemize}
+                \item[--] Implement multiple users management section in the web app of Harvestr, a French tech start-up.
+                \item[--] \textit{HTML, CSS, Typescript, Angular}
+            \end{itemize}
+        \end{cvsubsection}
+
+        % ---------------------------- BCG -----------------------------------------------------------------------------
+        \begin{cvsubsection}{Automatic slides generator}{}{}
+            \begin{itemize}
+                \item[--] Generator that automatically convert a Word document into a PowerPoint presentation. In partnership with the Boston Consulting Group.
+                \item[--] \textit{Python, XML}
+            \end{itemize}
+        \end{cvsubsection}
+
+    \end{cvsection}
+
+    % ================================ ADDITIONAL EXPERIENCE & AWARDS ==================================================
+    \begin{cvsection}{Additional Experience and Awards}
+        \begin{cvsubsection}{}{}{}
+            \begin{itemize}
+
+                % ---------------------------- Une Nuit pour Entreprendre ----------------------------------------------
+                \item \textbf{First Prize, Une Nuit pour Entreprendre 2017:} Member of the winning team of \textit{Une Nuit pour Entreprendre} at Ponts ParisTech, a sleepless
+                night competition where we created a start-up and pitched it in front of a jury in the morning.
+                Coached and challenged by entrepreneurs and professionals.
+                Our start-up was about a geolocalized public urban lightning.
+
+                % ---------------------------- Pogo Structures ---------------------------------------------------------
+                \item \textbf{Worker (Summer 2017):} Multitask worker on the Pogo Structures shipyard, the leading race sailing boat builder located in Brittany, France.
+
+            \end{itemize}
+        \end{cvsubsection}
+    \end{cvsection}
+
+    % ================================ SKILLS ==========================================================================
+    \begin{cvsection}{Skills}
+        \begin{cvsubsection}{}{}{}
+            \begin{itemize}
+                \item \textbf{Languages:} French (\textit{mother tongue}), English (\textit{fluent}), Spanish (\textit{intermediate})
+                \item \textbf{Software:} (\textit{proficient}:) JavaScript, HTML, CSS, React, (\textit{intermediate}:) C++, Python, (\textit{familiar}:) Typescript, Angular
+                \item \textbf{Technologies:} Webstorm, Git, Github, Electron, NodeJS, Jest, Enzyme, CircleCI, Pandas, Scikit-Learn
+            \end{itemize}
+        \end{cvsubsection}
+    \end{cvsection}
+
+\end{document}

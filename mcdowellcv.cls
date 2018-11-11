@@ -22,7 +22,7 @@
 \ProvidesClass{mcdowellcv}[2017/06/18 v1.2.0 McDowell CV class]
 
 % Set up the fonts according to options
-\def\mainfontsize{11pt}
+\def\mainfontsize{9pt}
 \def\mainfontface{Times New Roman}
 
 \DeclareOption{calibri}{%
@@ -32,10 +32,10 @@
 \ProcessOptions\relax
 
 % Set font size and paper type
-\LoadClass[letterpaper,\mainfontsize]{article} 
+\LoadClass[letterpaper,\mainfontsize]{article}
 
 % Set document margins
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} 
+\usepackage[left=0.7in,top=0.5in,right=0.7in,bottom=0.5in]{geometry}
 
 % Set font face
 \usepackage{fontspec}
@@ -43,16 +43,16 @@
 Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 
 % Remove paragraph indentation
-\usepackage[parfill]{parskip} 
+\usepackage[parfill]{parskip}
 
 % Required for boldface (\bf and \bfseries) tabular columns
-\usepackage{array} 
+\usepackage{array}
 
 % Required for ifthenelse statements
-\usepackage{etoolbox} 
+\usepackage{etoolbox}
 
 % Suppress page numbers
-\pagestyle{empty} 
+\pagestyle{empty}
 
 % Flexible tables
 \usepackage{tabu}
@@ -62,7 +62,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 
 % To customize lists
 \usepackage{enumitem}
-% Remove left margin from lists, suppress vertical item separation and set top 
+% Remove left margin from lists, suppress vertical item separation and set top
 % separation to a negative value to suppress a single parskip before lists
 \setlist{leftmargin=*, noitemsep, topsep=-1\parskip}
 
@@ -73,10 +73,23 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 % For spcaed small caps
 \usepackage{microtype}
 
-\DeclareMicrotypeSet*{smallcapsi} { 
+\DeclareMicrotypeSet*{smallcapsi} {
 	encoding = {OT1,T1,T2A,LY1,OT4,QX,T5,TS1,EU1,EU2},
 	shape = {sc*,si,scit}
 }
+
+% For blue clickable URLs
+\usepackage{hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
+
+\makeatletter
+\DeclareUrlCommand\ULurl@@{%
+\def\UrlFont{\ttfamily\color{blue}}%
+\def\UrlLeft{\uline\bgroup}%
+\def\UrlRight{\egroup}}
+\def\ULurl@#1{\hyper@linkurl{\ULurl@@{#1}}{#1}}
+\DeclareRobustCommand*\ULurl{\hyper@normalise\ULurl@}
+\makeatother
 
 %--------------------------------------------------------------------------------
 %                                    Constants                                  -
@@ -98,9 +111,9 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	\def\aftersubsectionspace{2.1pt}
 }{
 	\def\namespaceskip{0.4em}
-	\def\afterheaderspace{3pt}
+	\def\afterheaderspace{0.3pt}
 	\def\beforesectionheaderspace{4.75pt}
-	\def\sectionheadermargin{6pt}
+	\def\sectionheadermargin{3pt}
 	\def\beforesectionheaderhrulespace{3pt}
 	\def\sectionheaderhrlueheight{0.5pt}
 	\def\aftersectionheaderspace{-4pt}
@@ -160,7 +173,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	\begin{center}
 		\begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
 			\printaddress & \printname & \printcontacts \\
-		\end{tabu}	
+		\end{tabu}
 	\end{center}
 	\vspace*{\afterheaderspace}
 }
