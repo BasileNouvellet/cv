@@ -35,7 +35,7 @@
 \LoadClass[letterpaper,\mainfontsize]{article}
 
 % Set document margins
-\usepackage[left=0.7in,top=0.5in,right=0.7in,bottom=0.5in]{geometry}
+\usepackage[left=0.7in,top=0.4in,right=0.7in,bottom=0.4in]{geometry}
 
 % Set font face
 \usepackage{fontspec}
@@ -47,9 +47,6 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 
 % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{array}
-
-% Required for ifthenelse statements
-\usepackage{etoolbox}
 
 % Suppress page numbers
 \pagestyle{empty}
@@ -66,10 +63,6 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 % separation to a negative value to suppress a single parskip before lists
 \setlist{leftmargin=*, noitemsep, topsep=-1\parskip}
 
-% For adjusting spacing based on the platform used
-\usepackage{ifthen}
-\usepackage{ifplatform}
-
 % For spcaed small caps
 \usepackage{microtype}
 
@@ -78,52 +71,29 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	shape = {sc*,si,scit}
 }
 
-% For blue clickable URLs
-\usepackage{hyperref}
-\hypersetup{colorlinks,urlcolor=blue}
+% For clickable URLs
+\usepackage[hidelinks]{hyperref}
 
-\makeatletter
-\DeclareUrlCommand\ULurl@@{%
-\def\UrlFont{\ttfamily\color{blue}}%
-\def\UrlLeft{\uline\bgroup}%
-\def\UrlRight{\egroup}}
-\def\ULurl@#1{\hyper@linkurl{\ULurl@@{#1}}{#1}}
-\DeclareRobustCommand*\ULurl{\hyper@normalise\ULurl@}
-\makeatother
+% For colors
+\usepackage{xcolor}
 
 %--------------------------------------------------------------------------------
 %                                    Constants                                  -
 %--------------------------------------------------------------------------------
 
-\ifthenelse{\equal{\platformname}{\notwindowsname}}{
-	\def\namespaceskip{0.575em}
-	\def\afterheaderspace{1.1pt}
-	\def\beforesectionheaderspace{5pt}
-	\def\sectionheadermargin{6pt}
-	\def\beforesectionheaderhrulespace{2.85pt}
-	\def\sectionheaderhrlueheight{0.518pt}
-	\def\aftersectionheaderspace{-5.8pt}
-	\def\aftersinglelinesubsectionheaderspace{-20.25pt}
-	\def\afterdoublelinesubsectionheaderspace{-11.75pt}
-	\def\aftermultilinesubsectionheaderspace{-7.75pt}
-	\def\afteremptysubsectionheaderspace{1.25pt}
-	\def\subsectionmargin{9pt}
-	\def\aftersubsectionspace{2.1pt}
-}{
-	\def\namespaceskip{0.4em}
-	\def\afterheaderspace{0.3pt}
-	\def\beforesectionheaderspace{4.75pt}
-	\def\sectionheadermargin{3pt}
-	\def\beforesectionheaderhrulespace{3pt}
-	\def\sectionheaderhrlueheight{0.5pt}
-	\def\aftersectionheaderspace{-4pt}
-	\def\aftersinglelinesubsectionheaderspace{-18.5pt}
-	\def\afterdoublelinesubsectionheaderspace{-10pt}
-	\def\aftermultilinesubsectionheaderspace{-6pt}
-	\def\afteremptysubsectionheaderspace{3pt}
-	\def\subsectionmargin{9pt}
-	\def\aftersubsectionspace{4pt}
-}
+\def\namespaceskip{0.4em}
+\def\afterheaderspace{0.3pt}
+\def\beforesectionheaderspace{4.75pt}
+\def\sectionheadermargin{3pt}
+\def\beforesectionheaderhrulespace{3pt}
+\def\sectionheaderhrlueheight{0.5pt}
+\def\aftersectionheaderspace{-4pt}
+\def\aftersinglelinesubsectionheaderspace{-18.5pt}
+\def\afterdoublelinesubsectionheaderspace{-10pt}
+\def\aftermultilinesubsectionheaderspace{-6pt}
+\def\afteremptysubsectionheaderspace{3pt}
+\def\subsectionmargin{9pt}
+\def\aftersubsectionspace{4pt}
 
 %--------------------------------------------------------------------------------
 %                            Header Setup and Printing                          -
