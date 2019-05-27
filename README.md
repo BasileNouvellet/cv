@@ -4,15 +4,7 @@
 
 On Windows:
 
-[Install **MiKTeX**](https://miktex.org/download) (**lualatex** will be installed with)
-
-On Fedora 30:
-
-```bash
-sudo rpm --import "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xD6BC243565B2087BC3F897C9277A7293F59E4889"
-sudo curl -L -o /etc/yum.repos.d/miktex.repo https://miktex.org/download/fedora/30/miktex.repo
-sudo dnf update && sudo dnf install miktex texlive-latex
-```
+[Install **MiKTeX**](https://miktex.org/download) (**lualatex** will also be installed)
 
 ## Build instructions
 
